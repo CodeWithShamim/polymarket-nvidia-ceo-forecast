@@ -34,7 +34,7 @@ const PRIOR_EFFECTIVE = 12;
 /** Below this, a market counts as still and the spread falls back to a small floor. */
 const SIGMA_FLOOR = 0.0006;
 /** The outer quantiles are widened by this much, which pinball loss prices cheaply. */
-const TAIL_WIDEN = 1.08;
+const TAIL_WIDEN = Number(process.env.MAKEFUN_TAIL ?? 1.26);
 /** Global spread calibration, measured on the practice cases. */
 const SPREAD_SCALE = Number(process.env.MAKEFUN_SCALE ?? 0.11);
 
